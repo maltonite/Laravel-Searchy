@@ -13,13 +13,13 @@ abstract class BaseSearchDriver implements SearchDriverInterface {
 	protected $query;
 
 	/**
+     * @param $relevanceFieldName
 	 * @param null $table
 	 * @param array $searchFields
-	 * @param $relevanceFieldName
 	 * @param array $columns
 	 * @internal param $relevanceField
 	 */
-	public function __construct( $table = null, $searchFields = [], $relevanceFieldName, $columns = ['*'] )
+	public function __construct($relevanceFieldName, $table = null, $searchFields = [],  $columns = ['*'] )
 	{
 		$this->searchFields = $searchFields;
 		$this->table = $table;
